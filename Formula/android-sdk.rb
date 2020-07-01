@@ -1,36 +1,42 @@
 class AndroidSdk < Formula
-  version '4333796'
+  version '6609375'
   
-  homepage 'https://developer.android.google.cn/studio/releases/sdk-tools'
+  homepage 'https://developer.android.google.cn/studio#cmdline-tools'
   
-  # https://developer.android.google.cn/studio/index.html
   on_linux do
-    url "https://dl.google.com/android/repository/sdk-tools-linux-#{version}.zip"
-    sha256 '92ffee5a1d98d856634e8b71132e8a95d96c83a63fde1099be3d86df3106def9'
+    url "https://dl.google.com/android/repository/commandlinetools-linux-#{version}_latest.zip"
+    sha256 "89f308315e041c93a37a79e0627c47f21d5c5edbe5e80ea8dc0aac8a649e0e92"
   end
-
+  
   on_macos do
-    url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip"
-    sha256 'ecb29358bc0f13d7c2fa0f9290135a5b608e38434aad9bf7067d0252c160853e'
+    url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip"
+    sha256 "2c3822db1c916655223e5ee8ce0fbf6b73d0b99012045c9dc8eaa6a5736c0c55"
   end
   
   def install
-    system "cp -r * #{prefix}"
-    bin.install "android"
-    bin.install "emulator"
-    bin.install "emulator-check"
-    bin.install "mksdcard"
-    bin.install "monitor"
-    bin.install "bin/archquery"
-    bin.install "bin/avdmanager"
-    bin.install "bin/jobb"
-    bin.install "bin/lint"
-    bin.install "bin/monkeyrunner"
-    bin.install "bin/screenshot2"
-    bin.install "bin/sdkmanager"
-    bin.install "bin/uiautomatorviewer"
+    #https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se
+    system "mkdir -p #{prefix}/cmdline-tools/tools"
+    system "cp -r *  #{prefix}/cmdline-tools/tools"
+    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platforms;android-28\""
+    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platform-tools\""
+    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"build-tools;28.0.3\""
+    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"ndk-bundle\""
   end
   
+  def caveats
+    <<~EOS
+      You may want to add following code to your ~/.zshrc or ~/.bashrc or ~/.bash_profile
+
+      export ANDROID_HOME=/usr/local/opt/android-sdk
+      
+      PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
+      PATH=$PATH:appendPATH $ANDROID_HOME/platform-tools
+      export PATH=$PATH:$ANDROID_HOME/build-tools/28.0.3
+
+      export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
+    EOS
+  end
+
   test do
     system "sdkmanager --version"
   end
