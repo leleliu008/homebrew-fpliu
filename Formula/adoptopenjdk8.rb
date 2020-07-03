@@ -15,29 +15,18 @@ class Adoptopenjdk8 < Formula
   end
   
   def install
-    system "mkdir -p #{prefix}/cmdline-tools/tools"
-    system "cp -r *  #{prefix}/cmdline-tools/tools"
-    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platforms;android-28\""
-    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platform-tools\""
-    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"build-tools;28.0.3\""
-    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"ndk-bundle\""
+    system "cp -r * #{prefix}"
   end
   
   def caveats
     <<~EOS
       You may want to add following code to your ~/.zshrc or ~/.bashrc or ~/.bash_profile
 
-      export ANDROID_HOME=/usr/local/opt/android-sdk
-      
-      PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
-      PATH=$PATH:appendPATH $ANDROID_HOME/platform-tools
-      export PATH=$PATH:$ANDROID_HOME/build-tools/28.0.3
-
-      export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
+      export JAVA_HOME=$(brew --prefix adoptopenjdk8)
     EOS
   end
 
   test do
-    system "sdkmanager --version"
+    system "java -version"
   end
 end

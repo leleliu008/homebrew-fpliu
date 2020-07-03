@@ -3,6 +3,9 @@ class AndroidSdk < Formula
   homepage "https://developer.android.google.cn/studio#cmdline-tools"
   version  "6609375"
   
+  depends_on "unzip" => :build
+  depends_on "adoptopenjdk8"
+  
   on_linux do
     url "https://dl.google.com/android/repository/commandlinetools-linux-#{version}_latest.zip"
     sha256 "89f308315e041c93a37a79e0627c47f21d5c5edbe5e80ea8dc0aac8a649e0e92"
@@ -20,20 +23,17 @@ class AndroidSdk < Formula
     system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platforms;android-28\""
     system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"platform-tools\""
     system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"build-tools;28.0.3\""
-    system "printf y | #{prefix}/cmdline-tools/tools/bin/sdkmanager \"ndk-bundle\""
   end
   
   def caveats
     <<~EOS
       You may want to add following code to your ~/.zshrc or ~/.bashrc or ~/.bash_profile
 
-      export ANDROID_HOME=/usr/local/opt/android-sdk
+      export ANDROID_HOME=$(brew --prefix android-sdk)
       
       PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
-      PATH=$PATH:appendPATH $ANDROID_HOME/platform-tools
+      PATH=$PATH:$ANDROID_HOME/platform-tools
       export PATH=$PATH:$ANDROID_HOME/build-tools/28.0.3
-
-      export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
     EOS
   end
 
