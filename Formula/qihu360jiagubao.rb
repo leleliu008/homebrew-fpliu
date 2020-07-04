@@ -18,8 +18,8 @@ class Qihu360jiagubao < Formula
 
   def install
     bin.install "bin/360jiagubao"
-    lib.install "jiagu"
     zsh_completion.install "zsh-completion/_360jiagubao" => "_360jiagubao"
+    resource("additional_files").stage { lib.install "jiagu" }
   end
 
   test do
