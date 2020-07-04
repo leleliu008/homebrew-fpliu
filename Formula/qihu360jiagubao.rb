@@ -7,7 +7,7 @@ class Qihu360jiagubao < Formula
   resource "additional_files" do
     on_linux do
       url    "https://down.360safe.com/360Jiagu/360jiagubao_linux_64.zip"
-      sha256 "c6bc3f48ce8e797854c4b865f6a8ff969867bbcaebd648ae6fd825683e59fef2"
+      sha256 "374926730ddaa10a99f2261793a55906b19466aa2f3b5bc68a85137ac80fe261"
     end
     
     on_macos do
