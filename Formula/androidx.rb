@@ -2,7 +2,7 @@ class Androidx < Formula
   desc     "Android project helper"
   homepage "https://github.com/leleliu008/androidx"
   url      "https://github.com/leleliu008/androidx/releases/download/v0.1.0/androidx-0.1.0.tar.gz"
-  sha256   "7cd77e91120d3cdafc104dd2db782fcc21dd13c0fa064da04ca9d532caae5e9a"
+  sha256   "e7e5fa1246e3134acf910c1624d169c07c8369ae5eab64fc120706b5d6d533e2"
   head     "https://github.com/leleliu008/androidx.git"
   
   depends_on "android-sdk"
