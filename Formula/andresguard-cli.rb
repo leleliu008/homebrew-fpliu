@@ -2,7 +2,7 @@ class AndresguardCli < Formula
   desc     "Proguard resource for Android by wechat team"
   homepage "https://github.com/shwenzhang/AndResGuard"
   url      "https://github.com/leleliu008/AndResGuard-cli-wrapper/releases/download/v1.2.16/AndResGuard-cli-1.2.16.tar.gz"
-  sha256   "b116ea8bcbc0da7a66f3b367712a0302133aaf9764aeb2150288c6a0c427c4ab"
+  sha256   "84f704b2800a26e8625a8615235926ae714acb7530bc04ac85038b129fddc1a6"
 
   depends_on "p7zip"
   depends_on "android-sdk"
