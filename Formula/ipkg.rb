@@ -2,7 +2,7 @@ class Ipkg < Formula
   desc     "Package manager for Xcode to build C/C++ project"
   homepage "https://github.com/leleliu008/ipkg"
   url      "https://github.com/leleliu008/ipkg/releases/download/v0.1.0/ipkg-0.1.0.tar.gz"
-  sha256   "fe79b5dbaf503a87239799d816ce5da991521047cc109e58c0edbdf8577c1adb"
+  sha256   "07b56290632ad5cb3bbf8d1276ce5e8265177e8d887384aa8295ff402ec4797b"
   head     "https://github.com/leleliu008/ipkg.git"
   
   depends_on "curl"
