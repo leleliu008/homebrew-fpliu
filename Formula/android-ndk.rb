@@ -16,7 +16,7 @@ class AndroidNdk < Formula
   end
   
   def install
-    bin.install "ndk-build" "ndk-gdb" "ndk-lldb" "ndk-stack" "ndk-which"
+    bin.install "ndk-build", "ndk-gdb", "ndk-lldb", "ndk-stack", "ndk-which"
   end
   
   def caveats
