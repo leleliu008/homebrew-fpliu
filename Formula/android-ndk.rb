@@ -1,4 +1,4 @@
-class AndroidSdk < Formula
+class AndroidNdk < Formula
   desc     "Android Native Develpment Kit"
   homepage "https://developer.android.google.cn/ndk"
   version  "22.0.7026061"
