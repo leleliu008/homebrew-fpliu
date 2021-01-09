@@ -16,7 +16,22 @@ class AndroidNdk < Formula
   end
   
   def install
-    bin.install "ndk-build", "ndk-gdb", "ndk-lldb", "ndk-stack", "ndk-which"
+    system "cp -r *  #{prefix}"
+    system "mkdir bin"
+
+    %w[
+      ndk-build
+      ndk-stack
+      ndk-which
+      ndk-lldb
+      ndk-gdb
+    ].each { |item|
+      IO.write "bin/#{item}", <<~EOS
+        #!/bin/sh
+        exec "#{prefix}/#{item}" "${@}"
+      EOS
+      bin.install "bin/#{item}"
+    }
   end
   
   def caveats
