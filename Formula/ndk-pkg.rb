@@ -4,7 +4,6 @@ class NdkPkg < Formula
   url      "https://github.com/leleliu008/ndk-pkg/releases/download/v0.1.0/ndk-pkg-0.1.0.tar.gz"
   sha256   "6ea6e2e2fbeb3c54c10beb70db3b7a3aebaff7d2bff6e7941084b53057adc77d"
   head     "https://github.com/leleliu008/ndk-pkg.git"
-  depends_on "curl"
 
   def install
     bin.install "bin/ndk-pkg"
