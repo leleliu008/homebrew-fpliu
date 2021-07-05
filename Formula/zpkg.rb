@@ -1,4 +1,4 @@
-class NdkPkg < Formula
+class ZPkg < Formula
   desc     "Lightweight, portable package manager for UNIX"
   homepage "https://github.com/leleliu008/zpkg"
   url      "https://github.com/leleliu008/zpkg/releases/download/v0.1.0/zpkg-0.1.0.tar.gz"
