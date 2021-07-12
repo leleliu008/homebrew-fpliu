@@ -5,9 +5,6 @@ class Ipkg < Formula
   sha256   "45353b26525899ac922fd86dd4d73ede8517d9d713f23c0c9fe8948ea88172f0"
   head     "https://github.com/leleliu008/ipkg.git"
   
-  depends_on "curl"
-  depends_on "bat"
-  
   def install
     bin.install "bin/ipkg"
     zsh_completion.install "zsh-completion/_ipkg" => "_ipkg"
