@@ -4,7 +4,6 @@ class AndroidSdk < Formula
   version  "6609375"
   
   depends_on "unzip" => :build
-  depends_on "adoptopenjdk8"
   
   on_linux do
     url "https://dl.google.com/android/repository/commandlinetools-linux-#{version}_latest.zip"

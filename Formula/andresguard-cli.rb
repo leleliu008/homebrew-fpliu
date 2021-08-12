@@ -5,7 +5,6 @@ class AndresguardCli < Formula
   sha256   "84f704b2800a26e8625a8615235926ae714acb7530bc04ac85038b129fddc1a6"
 
   depends_on "p7zip"
-  depends_on "android-sdk"
 
   def install
     bin.install "bin/andresguard"
