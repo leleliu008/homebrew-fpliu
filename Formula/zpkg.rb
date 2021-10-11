@@ -1,8 +1,8 @@
 class Zpkg < Formula
   desc     "Lightweight, portable package manager for UNIX"
   homepage "https://github.com/leleliu008/zpkg"
-  url      "https://github.com/leleliu008/zpkg/releases/download/v0.1.1/zpkg-0.1.1.tar.gz"
-  sha256   "fd233e056cf770c9d2d53fad05b3f20cd40477bc1104e269a281785f6cff371d"
+  url      "https://github.com/leleliu008/zpkg/releases/download/v0.1.2/zpkg-0.1.2.tar.gz"
+  sha256   "b6c337e64cfeac7440c5cd3791e6f2c9ca8e28ae8930c44ee71783898e986953"
   head     "https://github.com/leleliu008/zpkg.git"
 
   def install
