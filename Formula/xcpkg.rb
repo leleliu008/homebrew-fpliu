@@ -1,8 +1,8 @@
 class Xcpkg < Formula
   desc     "Package manager for Xcode to build C/C++ project"
   homepage "https://github.com/leleliu008/xcpkg"
-  url      "https://github.com/leleliu008/xcpkg/releases/download/v0.1.5/xcpkg-0.1.5.tar.gz"
-  sha256   "0e74afe981efad2d05f1360155227e5874969a4abd871d45b9e93ff9a9d0b1b6"
+  url      "https://github.com/leleliu008/xcpkg/releases/download/v0.1.6/xcpkg-0.1.6.tar.gz"
+  sha256   "3f5b51f7c9a2c163e51e29c205dc43547dfe6a278491c6b95be2274f484b075b"
   head     "https://github.com/leleliu008/xcpkg.git"
   
   def install
