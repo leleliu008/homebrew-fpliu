@@ -9,7 +9,7 @@ class Qihu360jiagubao < Formula
       url    "https://down.360safe.com/360Jiagu/360jiagubao_linux_64.zip"
       sha256 "374926730ddaa10a99f2261793a55906b19466aa2f3b5bc68a85137ac80fe261"
     end
-    
+
     on_macos do
       url    "https://down.360safe.com/360Jiagu/360jiagubao_mac.zip"
       sha256 "7eac4e28e2ed60ee9a9f0c6c8c44a4d4945a657524fef409ee4c9139202026e6"

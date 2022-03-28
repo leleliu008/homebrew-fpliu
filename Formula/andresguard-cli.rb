@@ -4,18 +4,13 @@ class AndresguardCli < Formula
   url      "https://github.com/leleliu008/AndResGuard-cli-wrapper/releases/download/v1.2.16/AndResGuard-cli-1.2.16.tar.gz"
   url      "https://github.com/leleliu008/AndResGuard-cli-wrapper/releases/download/v1.2.16/AndResGuard-cli-1.2.16.tar.gz"
 
+  depends_on "java"
   depends_on "p7zip"
 
   def install
     bin.install "bin/andresguard"
     lib.install "lib/AndResGuard-cli-#{version}.jar"
     zsh_completion.install "zsh-completion/_andresguard" => "_andresguard"
-  end
-
-  def caveats
-    <<~EOS
-      this software depends on JDK. you may need install JDK yourself.
-    EOS
   end
 
   test do
