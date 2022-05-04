@@ -1,7 +1,7 @@
 class Jiagubao < Formula
   desc     "奇虎360的Android加固助手"
   homepage "https://jiagu.360.cn"
-  url      "https://github.com/leleliu008/jiagubao-wrapper/releases/download/v2022.05.04.4/jiagubao-2022.05.04.4.tar.gz"
+  url      "https://github.com/leleliu008/jiagubao-wrapper/releases/download/v2022.05.04/jiagubao-2022.05.04.tar.gz"
   sha256   "b9d3a07e50a5d95be1d12529fb7a175370d124ba81e9f3e9af3b7fd3c3bd3688"
 
   resource "additional_files" do
