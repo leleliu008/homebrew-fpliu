@@ -1,7 +1,7 @@
-class Qihu360jiagubao < Formula
+class Jiagubao < Formula
   desc     "奇虎360的Android加固助手"
   homepage "https://jiagu.360.cn"
-  url      "https://github.com/leleliu008/360jiagubao-wrapper/releases/download/v3.2.2.4/360jiagubao-3.2.2.4.tar.gz"
+  url      "https://github.com/leleliu008/jiagubao-wrapper/releases/download/v3.2.2.4/jiagubao-3.2.2.4.tar.gz"
   sha256   "69dce74f33b62687d26fb467db5177d86a2a3221e1c2e14aca5d68be00662e04"
 
   resource "additional_files" do
@@ -17,12 +17,12 @@ class Qihu360jiagubao < Formula
   end
 
   def install
-    bin.install "bin/360jiagubao"
-    zsh_completion.install "zsh-completion/_360jiagubao" => "_360jiagubao"
+    bin.install "bin/jiagubao"
+    zsh_completion.install "zsh-completion/_jiagubao" => "_jiagubao"
     resource("additional_files").stage { lib.install "jiagu" }
   end
 
   test do
-    system "#{bin}/360jiagubao", "-version"
+    system "#{bin}/jiagubao", "-version"
   end
 end
