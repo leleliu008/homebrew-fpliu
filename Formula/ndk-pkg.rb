@@ -1,8 +1,8 @@
 class NdkPkg < Formula
   desc     "Package manager for Android NDK"
   homepage "https://github.com/leleliu008/ndk-pkg"
-  url      "https://github.com/leleliu008/ndk-pkg/releases/download/v0.1.35/ndk-pkg-0.1.35.tar.gz"
-  sha256   "018014bcd375dc6813f2c65b3ddb8a853d82ad6e85f6e7b29a919a552eaf9401"
+  url      "https://github.com/leleliu008/ndk-pkg/releases/download/v0.1.36/ndk-pkg-0.1.36.tar.gz"
+  sha256   "2f03ab5a889aa437689be28431430ed798b190b3687526d06b94f4722b950eb9"
   head     "https://github.com/leleliu008/ndk-pkg.git"
 
   def install
