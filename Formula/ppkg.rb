@@ -2,7 +2,8 @@ class Ppkg < Formula
   desc     "A portable package manager for Unix-like system"
   homepage "https://github.com/leleliu008/ppkg"
   head     "https://github.com/leleliu008/ppkg.git", branch: "c"
-  url      "https://github.com/leleliu008/ppkg.git", tag: "0.1000.2", revision: "2adc1560343672f9cd515231a4ffedba02f04ed5"
+  url      "https://github.com/leleliu008/ppkg.git", revision: "2adc1560343672f9cd515231a4ffedba02f04ed5"
+  version  "0.1000.2"
   license  "Apache-2.0"
 
   depends_on "cmake" => :build
