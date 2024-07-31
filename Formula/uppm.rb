@@ -2,8 +2,8 @@ class Uppm < Formula
   desc     "Universal Prebuild Package Manager for Unix-like systems"
   homepage "https://github.com/leleliu008/uppm"
   head     "https://github.com/leleliu008/uppm.git", branch: "master"
-  url      "https://github.com/leleliu008/uppm.git", revision: "c53402c8f03c01b59052a17a65f0c297f15f2822"
-  version  "0.15.1"
+  url      "https://github.com/leleliu008/uppm.git", revision: "9ad65b8e827eea6e71e3e74c1b11fb0216bdce6d"
+  version  "0.15.4"
   license  "Apache-2.0"
 
   depends_on "cmake" => :build
